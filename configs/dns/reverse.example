@@ -1,0 +1,17 @@
+$TTL 1D
+@ IN SOA bastion.example.com. admin.example.com. (
+    2026100801
+    1D
+    1H
+    1W
+    3H
+)
+
+@ IN NS bastion.example.com.
+
+<BASTION_LAST_OCTET> IN PTR bastion.example.com.
+<REGISTRY_LAST_OCTET> IN PTR registry.example.com.
+
+<MASTER1_LAST_OCTET> IN PTR master1.example.com.
+<MASTER2_LAST_OCTET> IN PTR master2.example.com.
+<MASTER3_LAST_OCTET> IN PTR master3.example.com.

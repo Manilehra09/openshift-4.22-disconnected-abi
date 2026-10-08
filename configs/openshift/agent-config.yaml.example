@@ -1,0 +1,29 @@
+apiVersion: v1alpha1
+kind: AgentConfig
+
+metadata:
+  name: ocp
+
+rendezvousIP: <MASTER1_IP>
+
+additionalNTPSources:
+  - <BASTION_CLUSTER_IP>
+
+hosts:
+  - hostname: master1.example.com
+    role: master
+    interfaces:
+      - name: <NIC_NAME>
+        macAddress: "<MASTER1_MAC>"
+
+  - hostname: master2.example.com
+    role: master
+    interfaces:
+      - name: <NIC_NAME>
+        macAddress: "<MASTER2_MAC>"
+
+  - hostname: master3.example.com
+    role: master
+    interfaces:
+      - name: <NIC_NAME>
+        macAddress: "<MASTER3_MAC>"

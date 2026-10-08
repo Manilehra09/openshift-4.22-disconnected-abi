@@ -1,0 +1,10 @@
+apiVersion: mirror.openshift.io/v2alpha1
+kind: ImageSetConfiguration
+mirror:
+  platform:
+    channels:
+      - name: stable-4.22
+        minVersion: 4.22.15
+        maxVersion: 4.22.15
+        type: ocp
+    graph: true

@@ -1,0 +1,21 @@
+$TTL 1D
+@ IN SOA bastion.example.com. admin.example.com. (
+    2026100801
+    1D
+    1H
+    1W
+    3H
+)
+
+@ IN NS bastion.example.com.
+
+bastion  IN A <BASTION_CLUSTER_IP>
+registry IN A <REGISTRY_IP>
+
+master1 IN A <MASTER1_IP>
+master2 IN A <MASTER2_IP>
+master3 IN A <MASTER3_IP>
+
+api.ocp     IN A <BASTION_CLUSTER_IP>
+api-int.ocp IN A <BASTION_CLUSTER_IP>
+*.apps.ocp  IN A <BASTION_CLUSTER_IP>
